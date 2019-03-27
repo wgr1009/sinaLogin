@@ -224,38 +224,6 @@ if __name__ == '__main__':
 	app = WeiBo_GetAllParams()
 	app.main()
 
-# 'ttps://login.sina.com.cn/crossdomain2.php?action=login&entry=weibo&r=https%3A%2F%2Fpassport.weibo.com%2Fwbsso%2Flogin%3Fssosavestate%3D1585125287%26url%3Dhttps%253A%252F%252Fweibo.com%252Fajaxlogin.php%253Fframelogin%253D1%2526callback%253Dparent.sinaSSOController.feedBackUrlCallBack%2526sudaref%253Dweibo.com%26display%3D0%26ticket%3DST-Mzk5MTQ5OTkxMg%3D%3D-1553589287-tc-D5EAA338043CC2EAABA57B4436E3F837-1%26retcode%3D0&login_time=1553589287&sign=195748b1f99466a2&sr=1280%2A720'
-# 'https://login.sina.com.cn/sso/login.php?client=ssologin.js(v1.4.19)'
-#
-#
-# a = {
-# 	'entry': 'weibo',
-# 	'gateway': '1',
-# 	'from': '',
-# 	'savestate': '7',
-# 	'qrcode_flag': 'false',
-# 	'useticket': '1',
-# 	'pagerefer': '',
-# 	'pcid': 'tc-ef97612e7d8ec9260d54e486ed027d8c6b7b',
-# 	'door': 'wnh3m',
-# 	'vsnf': '1',
-# 	'su': 'MTM1MjAwOTY3MTc=',
-# 	'service': 'miniblog',
-# 	'servertime': 1553595767,
-# 	'nonce': 'KQF5CR',
-# 	'pwencode': 'rsa2',
-# 	'rsakv': '1330428213',
-# 	'sp': '4774ec3ea730f6b04717d4f80d95cbfe4f7dc7b32480c65264ca54636c9738f47eef36e2a5354db758fe94686d814539e38cc41b9df8952a83f55797a0e95a6424ba27a319a2f1747ad02b18e678849abba952bdde82f91784754123f5b48c52405c80f6647e1ca48115ecf1fe584864fed3529a735159ad00f74d143d6b9f82',
-# 	'sr':'1280*720',
-# 	'encoding': 'UTF-8',
-# 	'prelt': '235',
-# 	'url': 'https://weibo.com/ajaxlogin.php?framelogin=1&callback=parent.sinaSSOController.feedBackUrlCallBack',
-# 	'returntype': 'META'
-# }
-
-# 获取参数  1553606179259
-# 登录时间：1553606189
-
 
 
 
