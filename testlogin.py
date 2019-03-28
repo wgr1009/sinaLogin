@@ -43,7 +43,7 @@ class WeiBo_GetAllParams():
 		获取 登录的账号 base64加密值
 		:return: su
 		'''
-		s = base64.b64encode('hyrryav29zg7@game.weibo.com'.encode('utf-8'))
+		s = base64.b64encode('账号'.encode('utf-8'))
 		self.su = str(s,'utf-8')
 
 		return self.su
@@ -64,7 +64,7 @@ class WeiBo_GetAllParams():
 			'Referer':'https://weibo.com/',
 			'Accept-Encoding':'gzip, deflate, br',
 			'Accept-Language':'zh-CN,zh;q=0.9',
-			'Cookie':'SINAGLOBAL=172.16.7.64_1541939570.721665; SCF=Ak3IcmFa3yKd7mzKEkabIn3vjbqXix-Fc71J5pljheQ2ozKd3KrAfmbyRtaY8BMF7I4HGIlUsOA5rgRu8lpZFQ8.; UOR=www.baidu.com,blog.sina.com.cn,; U_TRS1=00000059.70721973.5c43dc0c.65d2cc32; login=f656a41107fa6197509ed6d05b9390fd; Apache=10.13.240.97_1553414327.308810; SUB=_2AkMry8hrdcPxrABYkfkRxWLrbY9H-jyYHqGdAn7tJhMyAhh77m4-qSVutBF-XK7FcnMw3THTQWr5v_HczunEEDfY; SUBP=0033WrSXqPxfM72wWs9jqgMF55529P9D9WFnWwZ_jmpS6muh80BVDYCP5JpVF020SKz7eh.cS02N'
+			'Cookie':'cookie值',
 		}
 
 		params = {
@@ -89,13 +89,12 @@ class WeiBo_GetAllParams():
 		self.nonce = data['nonce']
 		self.rsakv = data['rsakv']
 		self.pubkey = data['pubkey']
-		logging.log(logging.WARNING, '不进行证书验证')
 
 		return self.pcid, self.servertime, self.nonce, self.rsakv, self.pubkey
 
 
 	def get_LoginSp(self):
-		password = '600p39sbo'
+		password = '登录密码'
 		message = str(self.servertime)+'\t'+str(self.nonce) + '\n' + password
 		rsa_n = int(self.pubkey, 16)
 		rsa_e = int('10001', 16)
@@ -185,7 +184,7 @@ class WeiBo_GetAllParams():
 			'Referer':'https://weibo.com/',
 			'Accept-Encoding':'gzip, deflate, br',
 			'Accept-Language':'zh-CN,zh;q=0.9',
-			'Cookie':'login=ec1b2ebb0879ca371fdf54d7c71fe5fa; SINAGLOBAL=172.16.7.64_1553557947.893781; Apache=172.16.7.64_1553557947.893783; SCF=AqgYWoSaLmj_LqkpSEO4DUtAkhDFW9g3VMJSptJvA1WM8K8g0PCOThGiyrSvnnS3USI2L3Td_vtesu0Tn2uvbsU.; SUB=_2AkMrxWs2dcPxrABYkfkRxWLrbY9H-jyYEALAAn7tJhMyAhh77lQtqSVutBF-XKc_OJ-HuKf1h3PP9Wzq7_gh190a; SUBP=0033WrSXqPxfM72wWs9jqgMF55529P9D9WFnWwZ_jmpS6muh80BVDYCP5JpVF020SKz7eh.cS02N',
+			'Cookie':'Cookie',
 
 		}
 
@@ -236,12 +235,6 @@ class WeiBo_GetAllParams():
 			except json.decoder.JSONDecodeError:
 				print('访问出问题')
 				self.main()
-
-
-	def get_logindata(self):
-		url = 'https://weibo.com/u/1669879400?is_all=1'
-		res = self.session.get(url)
-		print(res.text)
 
 
 
